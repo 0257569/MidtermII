@@ -7,6 +7,10 @@
     <!-- Bootstrap css library -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styleIndividual.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Bebas+Neue&family=Saira+Semi+Condensed:wght@200;400;600&display=swap" rel="stylesheet">
+  
 </head>
 <body>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -33,36 +37,49 @@
   </nav>
 </header>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<main class="container-fluid mt-5" id="main">
-  <div class="card shadow-sm">
-    <h2>Superman</h2>
-      <img id="heroImage" src="../imgs/heroSample.jpg" alt="">
-      <div class="card-body" id="cardBody">
-      <p class="card-text">
-        <span id="myID" class="myText">ID</span><br><hr>
-        <span id="myFull_Name" class="myText">Full Name</span><br><hr>
-        <span id="myPowerstats" class="myText">Powerstats</span><br><hr>
-        <span id="myPlace_of_Birth" class="myText">Place of Birth</span><br><hr>
-        <span id="mySmall_Biography" class="myText">Small Biography</span><br><hr>
-        <span id="myAliases" class="myText">Aliases (If any)</span><br><hr>
-        <span id="myGender" class="myText">Gender</span><br><hr>
-        <span id="myRace" class="myText">Race</span><br><hr>
-        <span id="myHeight" class="myText">Height</span><br><hr>
-        <span id="myWeight" class="myText">Weight</span><br><hr>
-        <span id="myEye-Color" class="myText">Eye-Color</span><br><hr>
-        <span id="myHair-Color" class="myText">Hair-Color</span><br><hr>
-        <span id="myGroup_Affiliation" class="myText">Group Affiliation</span><hr>             
-      </p>
+<main class="container" id="main">
+  <h2>Superman</h2>
+  <div class="container" id="dataSheet">
+    <div class="row row-cols-1 row-cols-sm-1 g-1">
+      <div class="col">
+        <div class="row">
+          <div class="col-12 col-sm-6" id="mainImage">
+            <img width="90%" id="heroImage" src="../imgs/heroSample.jpg" alt="">
+          </div>
+          <div class="col-12 col-sm-6">
+            <p class="">
+              <span id="myID" class="myText">ID</span><br><hr>
+              <span id="myFull_Name" class="myText">Full Name</span><br><hr>
+              <span id="myPowerstats" class="myText">Powerstats</span><br><hr>
+              <span id="myPlace_of_Birth" class="myText">Place of Birth</span><br><hr>
+              <span id="myAliases" class="myText">Aliases (If any)</span><br><hr>
+              <span id="myGender" class="myText">Gender</span><br><hr>
+              <span id="myRace" class="myText">Race</span><br><hr>
+              <span id="myHeight" class="myText">Height</span><br><hr>
+              <span id="myWeight" class="myText">Weight</span><br><hr>
+              <span id="myEye-Color" class="myText">Eye-Color</span><br><hr>
+              <span id="myHair-Color" class="myText">Hair-Color</span><br><hr>
+              <span id="myGroup_Affiliation" class="myText">Group Affiliation</span>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <hr>
+          <span id="mySmall_Biography" class="myText">Small Biography</span><br>
+          <hr>
+        </div>
+      </div>
     </div>
   </div>
 </main>
+
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-<footer class="py-3 my-4">
+<footer class="py-3 my-4 shadow">
   <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Github</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 ">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 ">Github</a></li>
   </ul>
-  <p class="text-center text-body-secondary">© 2023 Com111, web development</p>
+  <p class="text-center ">© 2023 Com111, web development</p>
 </footer>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- Bootstrap js library -->

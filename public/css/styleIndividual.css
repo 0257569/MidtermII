@@ -1,0 +1,24 @@
+:root {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 16px;  /* Set the default font size to 16 pixels */
+  }
+  body{
+    font-family: "Saira Semi Condensed";
+    font-weight: 600;
+    background-color: black;
+    color: aliceblue;
+  }
+  #main {
+    margin-top: 5rem!important;
+  }
+  #dataSheet{
+    padding: 1rem;
+    border-radius: 1rem;
+    color: black;
+    background-color: aliceblue;
+  }
+  #mainImage{
+    padding-bottom: 1rem;
+  }
