@@ -6,7 +6,10 @@
     <title>Superheropedia</title>
     <!-- Bootstrap css library -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styleIndex.css">
+    <link rel="stylesheet" href="../css/styleIndex.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Bebas+Neue&family=Saira+Semi+Condensed:wght@200;400;600&display=swap" rel="stylesheet">
   </head>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <body>
@@ -35,9 +38,9 @@
 </header>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <main class="container-fluid">
-  <div class="container-fluid row">
+  <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3">
 <!-- Side superheroes -->
-    <div class="container col">
+    <div class="col">
       <div class="card shadow-sm">
         <img src="../imgs/Matt.webp" alt="">
         <div class="card-body">
@@ -55,17 +58,37 @@
       </div>
     </div>
     </div>
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- Search Form -->
 <!-- Backend Required -->
 
-    <div class="container col">
-      <form action="">
-        <input class="form-control me-2" type="search" placeholder="Superhero" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    <div class="col-" id="form">   
+      <div class="row align-items-center" id="mainMain">
+        <div class="col" id="formContents">
+          <div class="row">
+            <div class="col">
+              <img src="../imgs/superHeroIcon.png" alt="">
+            </div>
+            <div class="col">
+              <p>Search for your favourite superhero</p>
+            </div>
+          </div>
+          <form action="" id="mainForm">
+            <input class="form-control me-2" type="search" placeholder="Superhero" aria-label="Search">
+            <div class="row">
+              <div class="col"></div>
+              <div class="col">
+                <button class="" type="submit">Search</button>
+              </div>
+              <div class="col"></div>
+            </div> 
+          </form>
+        </div>
+      </div>      
     </div>
+<!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- Side superheroes -->
-<div class="container col">
+<div class="col">
   <div class="card shadow-sm">
     <img src="../imgs/Matt.webp" alt="">
     <div class="card-body">
@@ -85,12 +108,12 @@
 </div>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <!-- Footer -->
-<footer class="py-3 my-4">
+<footer class="py-3 my-4 shadow">
   <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Github</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 ">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 ">Github</a></li>
   </ul>
-  <p class="text-center text-body-secondary">© 2023 Com111, web development</p>
+  <p class="text-center ">© 2023 Com111, web development</p>
 </footer>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- Bootstrap js library -->
