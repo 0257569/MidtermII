@@ -1,0 +1,11 @@
+:root{
+    font-size: 13px;
+}
+main{
+    background-color: blue
+}
+.card{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
