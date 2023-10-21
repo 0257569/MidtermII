@@ -1,0 +1,32 @@
+<%- include("partials/header"); %>
+    <main class="container-fluid mt-5" id="main">
+        <section class="container">
+            <br />
+            <h1>Catalog</h1>
+            <h2>Search for your new favourite</h2>
+        </section>
+        <div class="album py-5">
+            <div class="container">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-5">
+                    <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                    <!-- This is what needs to be repeated in backend with all of the heroes -->
+                    <% superArr.forEach((sup)=>{ %>
+                        <div class="col shadow-sm">
+                            <div class="container heroMiniCard">
+                                <img width="50px" src="<%= sup.images.sm %>" alt="">
+                                <span class="myText">
+                                    <%= sup.name %>
+                                </span>
+                            </div>
+                        </div>
+                        <% });%>
+
+                            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                </div>
+            </div>
+        </div>
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    </main>
+    <%- include("partials/footer"); %>

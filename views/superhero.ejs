@@ -1,0 +1,45 @@
+<%- include("partials/header"); %>
+<main class="container" id="main">
+    <h2><%= sup.name %></h2>
+    <div class="container" id="dataSheet">
+      <div class="row row-cols-1 row-cols-sm-1 g-1">
+        <div class="col">
+          <div class="row">
+            <div class="col-12 col-sm-6" id="mainImage">
+              <img width="90%" id="heroImage" src="../imgs/heroSample.jpg" alt="">
+            </div>
+            <div class="col-12 col-sm-6">
+              <p class="">
+                <span id="myID" class="myText">ID: <%= sup.id %></span><br><hr>
+                <span id="myFull_Name" class="myText">Full Name: <%= sup.biography.fullName %></span><br><hr>
+                <span id="myPowerstats" class="myText">Powerstats: Intelligence <%= sup.powerstats.intelligence %>, Strength <%= sup.powerstats.strength %>, Speed <%= sup.powerstats.speed %>, Durability <%= sup.powerstats.durability %>, Power <%= sup.powerstats.power %>, Combat <%= sup.powerstats.combat %></span><br><hr>
+                <span id="myPlace_of_Birth" class="myText">Place of Birth: <%= sup.biography.placeOfBirth %></span><br><hr>
+                <span id="myAliases" class="myText">Aliases: <%= sup.biography.aliases %></span><br><hr>
+                <span id="myGender" class="myText">Gender: <%= sup.appearance.gender %></span><br><hr>
+                <span id="myRace" class="myText">Race: <%= sup.appearance.race %></span><br><hr>
+                <span id="myHeight" class="myText">Height: <%= sup.appearance.height %></span><br><hr>
+                <span id="myWeight" class="myText">Weight: <%= sup.appearance.weight %></span><br><hr>
+                <span id="myEye-Color" class="myText">Eye-Color: <%= sup.appearance.eyeColor %></span><br><hr>
+                <span id="myHair-Color" class="myText">Hair-Color: <%= sup.appearance.hairColor %></span><br><hr>
+                <span id="myGroup_Affiliation" class="myText">Group Affiliation: <%= sup.connections.groupAffiliation %></span>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <!-- Backend Required -->
+                    <form method="GET">
+                        <button type="submit" class="btn btn-sm btn-outline-secondary"
+                            formaction="/previous">Previous</button>
+                        <button type="submit" class="btn btn-sm btn-outline-secondary"
+                            formaction="/next">Next</button>
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+<%- include("partials/footer"); %>
