@@ -10,6 +10,7 @@
 </head>
 <body>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- Navbar -->
 <header class="container">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
@@ -19,7 +20,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li><button>Generate Random</button></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Catalog</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="superhero.html">Generate Random</a></li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Superhero" aria-label="Search">
@@ -31,53 +34,36 @@
 </header>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 <main class="container-fluid mt-5" id="main">
-  <div class="container" id="Row">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col">
-
-        <div class="card shadow-sm">
-          <h2>Superman</h2>
-            <img src="../imgs/heroSample.jpg" alt="">
-            <div class="card-body">
-            <p class="card-text">
-              <span>ID</span><br>
-              <span>Full Name</span><br>
-              <span>Powerstats</span><br>
-              <span>Place of Birth</span><br>
-              <span>Small Biography</span><br>
-              <span>Aliases (If any)</span><br>
-              <span>Gender</span><br>
-              <span>Race</span><br>
-              <span>Height</span><br>
-              <span>Weight</span><br>
-              <span>Eye-Color</span><br>
-              <span>Hair-Color</span><br>
-              <span>Group Affiliation</span>
-            </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Previous</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Next</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="card shadow-sm">
+    <h2>Superman</h2>
+      <img id="heroImage" src="../imgs/heroSample.jpg" alt="">
+      <div class="card-body" id="cardBody">
+      <p class="card-text">
+        <span id="myID" class="myText">ID</span><br><hr>
+        <span id="myFull_Name" class="myText">Full Name</span><br><hr>
+        <span id="myPowerstats" class="myText">Powerstats</span><br><hr>
+        <span id="myPlace_of_Birth" class="myText">Place of Birth</span><br><hr>
+        <span id="mySmall_Biography" class="myText">Small Biography</span><br><hr>
+        <span id="myAliases" class="myText">Aliases (If any)</span><br><hr>
+        <span id="myGender" class="myText">Gender</span><br><hr>
+        <span id="myRace" class="myText">Race</span><br><hr>
+        <span id="myHeight" class="myText">Height</span><br><hr>
+        <span id="myWeight" class="myText">Weight</span><br><hr>
+        <span id="myEye-Color" class="myText">Eye-Color</span><br><hr>
+        <span id="myHair-Color" class="myText">Hair-Color</span><br><hr>
+        <span id="myGroup_Affiliation" class="myText">Group Affiliation</span><hr>             
+      </p>
     </div>
   </div>
 </main>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-     
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-          </ul>
-          <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
-        </footer>
+<footer class="py-3 my-4">
+  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Github</a></li>
+  </ul>
+  <p class="text-center text-body-secondary">© 2023 Com111, web development</p>
+</footer>
 <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <!-- Bootstrap js library -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
