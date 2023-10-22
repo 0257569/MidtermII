@@ -3,29 +3,31 @@
     <main class="container-fluid">
         <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-3">
             <!-- Side superheroes -->
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="<%= sup1.images.lg %>" alt="">
-                    <div class="card-body">
-                        <article class="card-text">
-                            <h3>
-                                <%= sup1.name %>
-                            </h3>
-                        </article>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <!-- Backend Required -->
-                                <form method="GET">
-                                    <button type="submit" class="btn btn-sm btn-outline-secondary"
-                                        formaction="/previous">Previous</button>
-                                    <button type="submit" class="btn btn-sm btn-outline-secondary"
-                                        formaction="/next">Next</button>
-                                </form>
+            <a href="/showSup?index=<%= index1 %>" style="text-decoration: none; color: inherit;">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="<%= sup1.images.lg %>" alt="">
+                        <div class="card-body">
+                            <article class="card-text">
+                                <h3>
+                                    <%= sup1.name %>
+                                </h3>
+                            </article>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <!-- Backend Required -->
+                                    <form method="GET">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary"
+                                            formaction="/previous">Previous</button>
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary"
+                                            formaction="/next">Next</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
             <!-- Search Form -->
             <!-- Backend Required -->
@@ -41,12 +43,12 @@
                                 <p>Search for your favourite superhero</p>
                             </div>
                         </div>
-                        <form action="" id="mainForm">
-                            <input class="form-control me-2" type="search" placeholder="Superhero" aria-label="Search">
+                        <form action="/search" method="get" id="mainForm">
+                            <input class="form-control me-2" type="search" name = "name" placeholder="Superhero" aria-label="Search">
                             <div class="row">
                                 <div class="col"></div>
                                 <div class="col">
-                                    <button class="" type="submit">Search</button>
+                                    <button class="btn btn-secondary" type="submit">Search</button>
                                 </div>
                                 <div class="col"></div>
                             </div>
@@ -56,27 +58,29 @@
             </div>
             <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
             <!-- Side superheroes -->
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="<%= sup2.images.lg %>" alt="">
-                    <div class="card-body">
-                        <article class="card-text">
-                            <h3>
-                                <%= sup2.name %>
-                            </h3>
-                        </article>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <!-- Backend Required -->
-                                <form method="GET">
-                                    <button type="submit" class="btn btn-sm btn-outline-secondary"
-                                        formaction="/previous">Previous</button>
-                                    <button type="submit" class="btn btn-sm btn-outline-secondary"
-                                        formaction="/next">Next</button>
-                                </form>
+            <a href="/showSup?index=<%= index2 %>" style="text-decoration: none; color: inherit;">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="<%= sup2.images.lg %>" alt="">
+                        <div class="card-body">
+                            <article class="card-text">
+                                <h3>
+                                    <%= sup2.name %>
+                                </h3>
+                            </article>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <!-- Backend Required -->
+                                    <form method="GET">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary"
+                                            formaction="/previous">Previous</button>
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary"
+                                            formaction="/next">Next</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </a>
             <%- include("partials/footer"); %>

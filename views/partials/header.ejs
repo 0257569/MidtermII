@@ -26,10 +26,10 @@
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="/catalog">Catalog</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/superhero">Generate Random</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/random">Generate Random</a></li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Superhero" aria-label="Search">
+        <form action="/search" method="get" class="d-flex" role="search">
+          <input class="form-control me-2" type="search" name="name" placeholder="Superhero" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>

@@ -21,7 +21,7 @@ const work = "/work";
 let superArr = [];
 var supName;
 var limit = 0;
-var index = 1;
+var index = 1, indexIndiv = 1;
 
 function getByName(){
   if (!superArr) {
@@ -64,14 +64,16 @@ app.route("/")
   .get((req, res) => {
     getAllJson(() => {
       var sup1 = index, sup2 = index + 1;
-      if (index >= limit) {
+      if (index >= limit && limit % 2 != 0) {
         sup2 = 1;
       }
 
       res.render("index", {
         currPage: "Index",
         sup1: superArr[sup1 - 1],
-        sup2: superArr[sup2 - 1]
+        index1: sup1 - 1,
+        sup2: superArr[sup2 - 1],
+        index2: sup2 - 1
       });
     });
   });
@@ -94,31 +96,74 @@ app.route("/previous")
   res.redirect("/");
 });
 
+app.route("/nextIndiv")
+.get((req, res) =>{
+  indexIndiv++;
+  if(indexIndiv > limit){
+    indexIndiv = 1;
+  }
+  res.redirect("/superhero");
+});
+
+app.route("/previousIndiv")
+.get((req, res) =>{
+  indexIndiv -= 1;
+  if(indexIndiv < 1){
+    indexIndiv = limit;
+  }
+  res.redirect("/superhero");
+});
+
 app.route("/catalog")
 .get((req, res) =>{
+  getAllJson(() => {
     res.render("catalog", {currPage: "Catalog", superArr: superArr});
+  });
 });
 
 app.route("/superhero")
 .get((req, res) =>{
-    res.render("superhero", {currPage: "Individual", sup: superArr[0]});
+  getAllJson(() => {
+    res.render("superhero", {currPage: "Individual", sup: superArr[indexIndiv - 1]});
+  });
+});
+
+app.route("/showSup")
+.get((req, res) =>{
+  indexIndiv = req.query.index;
+  indexIndiv++;
+  res.redirect("/superhero");
+});
+
+app.route("/search").get((req, res) => {
+  var found = false;
+  supName = req.query.name;
+
+  superArr.forEach((sup, index) => {
+    if (sup.name.toLowerCase() == supName.toLowerCase()) {
+      indexIndiv = index + 1;
+      found = true;
+      return; // End the loop
+    }
+  });
+
+  if (found) {
+    res.redirect("/superhero");
+  } else {
+    res.redirect("/error");
+  }
+});
+
+
+app.route("/random")
+.get((req, res) =>{
+    indexIndiv = Math.floor(Math.random() * limit) + 1;
+    res.redirect("/superhero");
 });
 
 app.route("/error")
 .get((req, res) =>{
     res.render("error", {currPage: "Error"});
-});
-
-app.route("/All")
-.get((req, res) =>{
-  getAllJson();
-  res.status(200).json(superArr);
-});
-
-app.route("/Sup")
-.get((req, res) =>{
-  supName = req.query.name;
-  getByName();
 });
 
 app.use((err, req, res, next)=>{
